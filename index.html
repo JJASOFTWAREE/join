@@ -78,6 +78,13 @@ h2{font-size:21px;margin:36px 0 6px;font-weight:700}
 .app .row .btn{min-height:48px;font-size:15.5px}
 .app.joined .row .btn{background:var(--ok);color:var(--surface)}
 .en{white-space:nowrap;unicode-bidi:isolate}
+.share{margin:22px 0 4px;background:linear-gradient(160deg,var(--surface),var(--surface2));border:1px solid var(--gold);border-radius:20px;padding:18px;text-align:center;box-shadow:var(--shadow)}
+.share .hadith{font-size:19px;font-weight:700;line-height:1.8;margin:0;color:var(--gold-strong)}
+.share .src{display:block;font-size:13px;color:var(--muted);margin:2px 0 10px}
+.share p{margin:0 0 14px;color:var(--muted);font-size:15.5px}
+.share .row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.share .copied{display:none;color:var(--ok);font-size:14.5px;font-weight:600;margin-top:10px}
+.share.done .copied{display:block}
 .tip{font-size:14.5px;color:var(--muted);background:var(--surface2);border-radius:12px;padding:10px 12px;margin-top:12px}
 details{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
 summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px}
@@ -111,6 +118,16 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
     <div class="android-only" id="notAndroid"><b>تستخدم آيفون؟</b> التجربة الآن لجوالات أندرويد فقط، ولا تعمل على الآيفون.</div>
   </section>
 
+  <div class="share" id="shareTop">
+    <p class="hadith">«مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ»</p>
+    <span class="src">رواه مسلم</span>
+    <p>مصحف تقرأ منه، ومواقيت تذكّر بالصلاة، ومجانية بالكامل. شارك الرابط مع أهلك وأصحابك، ولك مثل أجر كل من ينتفع بها.</p>
+    <div class="row2">
+      <a class="btn" data-share href="https://wa.me/?text=">شارك الرابط</a>
+      <button class="ghost" type="button" data-copy>انسخ الرابط</button>
+    </div>
+    <div class="copied">نُسخ الرابط ✓</div>
+  </div>
 
   <h2>الخطوات</h2>
   <p class="sub">استخدم نفس حساب Google الموجود في متجر Play بجوالك.</p>
@@ -151,6 +168,16 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
     <p style="margin:0">افتحه واستخدمه كعادتك، وأبقه مثبّتًا ولا تلغِ اشتراكك <b>14&nbsp;يومًا على الأقل</b>؛ هذا شرط Google لنطلقه للجميع. وإن لاحظت شيئًا، راسلنا من داخل التطبيق.</p>
   </div>
 
+  <div class="share">
+    <p class="hadith" style="font-size:17px">لا تجعل الخير يقف عندك</p>
+    <p>أرسل الرابط لمن تحب، والأجر لك بإذن الله.</p>
+    <div class="row2">
+      <a class="btn" data-share href="https://wa.me/?text=">شارك الرابط</a>
+      <button class="ghost" type="button" data-copy>انسخ الرابط</button>
+    </div>
+    <div class="copied">نُسخ الرابط ✓</div>
+  </div>
+
   <h2>أسئلة سريعة</h2>
   <details><summary>هل تعمل على الآيفون؟</summary><p>لا، التجربة الآن لجوالات أندرويد فقط عن طريق Google Play.</p></details>
   <details><summary>هل هي مجانية؟</summary><p>نعم، مجانية بالكامل. التحميل مجاني، وكل الميزات مفتوحة بلا اشتراك.</p></details>
@@ -182,6 +209,23 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   var ua=navigator.userAgent, ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
   if(!/Android/i.test(ua)){ document.documentElement.classList.add('not-android');
     if(!ios) document.getElementById('notAndroid').innerHTML='التجربة لجوالات أندرويد فقط. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.'; }
+  var URL='https://jjasoftwaree.github.io/join/';
+  var MSG='مصحف طيبة وتطبيق أوقات لمواقيت الصلاة، مجانية بالكامل. جرّبها قبل إطلاقها، و«من دلّ على خير فله مثل أجر فاعله»:
+'+URL;
+  document.querySelectorAll('[data-share]').forEach(function(a){
+    a.href='https://wa.me/?text='+encodeURIComponent(MSG);
+    a.addEventListener('click', function(e){
+      if(navigator.share){ e.preventDefault(); navigator.share({text:MSG}).catch(function(){}); }
+    });
+  });
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var box=b.closest('.share');
+      function ok(){ box.classList.add('done'); setTimeout(function(){ box.classList.remove('done'); },2500); }
+      if(navigator.clipboard){ navigator.clipboard.writeText(URL).then(ok,function(){ prompt('انسخ الرابط:',URL); }); }
+      else { prompt('انسخ الرابط:',URL); }
+    });
+  });
   document.getElementById('y').textContent = new Date().getFullYear();
   paint();
 })();
