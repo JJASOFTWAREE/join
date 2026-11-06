@@ -220,8 +220,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   if(!/Android/i.test(ua)){ document.documentElement.classList.add('not-android');
     if(!ios) document.getElementById('notAndroid').innerHTML='التجربة لجوالات أندرويد فقط. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.'; }
   var URL='https://jjasoftwaree.github.io/join/';
-  var MSG='تطبيق للمصحف الشريف وتطبيق لمواقيت الصلاة، مجانية بالكامل. جرّبها قبل إطلاقها، و«من دلّ على خير فله مثل أجر فاعله»:
-'+URL;
+  var MSG='تطبيق للمصحف الشريف وتطبيق لمواقيت الصلاة، مجانية بالكامل. جرّبها قبل إطلاقها، و«من دلّ على خير فله مثل أجر فاعله»:\n'+URL;
   document.querySelectorAll('[data-share]').forEach(function(a){
     a.href='https://wa.me/?text='+encodeURIComponent(MSG);
     a.addEventListener('click', function(e){
