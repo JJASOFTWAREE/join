@@ -230,10 +230,23 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   });
   document.querySelectorAll('[data-copy]').forEach(function(b){
     b.addEventListener('click', function(){
-      var box=b.closest('.share');
-      function ok(){ box.classList.add('done'); setTimeout(function(){ box.classList.remove('done'); },2500); }
-      if(navigator.clipboard){ navigator.clipboard.writeText(URL).then(ok,function(){ prompt('انسخ الرابط:',URL); }); }
-      else { prompt('انسخ الرابط:',URL); }
+      var box=b.closest('.share'), label=b.textContent;
+      function ok(){
+        b.textContent='تم النسخ ✓'; box.classList.add('done');
+        setTimeout(function(){ b.textContent=label; box.classList.remove('done'); },2500);
+      }
+      // The old way works inside in-app browsers (WhatsApp, Instagram) where the newer one is often blocked.
+      var done=false;
+      try{
+        var t=document.createElement('textarea'); t.value=URL; t.setAttribute('readonly','');
+        t.style.cssText='position:fixed;top:0;left:0;opacity:0;font-size:16px';
+        document.body.appendChild(t); t.focus(); t.select(); t.setSelectionRange(0,URL.length);
+        done=document.execCommand('copy'); document.body.removeChild(t);
+      }catch(e){}
+      if(done){ ok(); return; }
+      if(navigator.clipboard&&window.isSecureContext){
+        navigator.clipboard.writeText(URL).then(ok,function(){ prompt('انسخ الرابط:',URL); });
+      } else { prompt('انسخ الرابط:',URL); }
     });
   });
   document.getElementById('y').textContent = new Date().getFullYear();
