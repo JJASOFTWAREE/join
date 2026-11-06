@@ -7,7 +7,7 @@
 <meta name="description" content="جرّب تطبيقات JJA Software قبل إطلاقها على Google Play، بخطوتين ومن غير ما ترسل بريدك لأحد.">
 <meta property="og:title" content="انضم لتجربة تطبيقات JJA Software">
 <meta property="og:description" content="خطوتين من جوالك، ومن غير ما ترسل بريدك لأحد.">
-<meta property="og:image" content="https://jjasoftwaree.github.io/join/icons/sa.jja.hijri.png">
+<meta property="og:image" content="https://jjasoftwaree.github.io/join/icons/sa.taibah.mushaf.png">
 <meta name="theme-color" content="#0e0d0b" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141210'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='22' fill='%23d8b56a' text-anchor='middle'%3EJJA%3C/text%3E%3C/svg%3E">
@@ -43,9 +43,10 @@ header.top{display:flex;align-items:center;justify-content:space-between;padding
 .brand span{direction:ltr}
 .hero{padding:28px 0 8px;text-align:center}
 .icons{display:flex;justify-content:center;gap:10px;margin-bottom:22px}
-.icons img{width:56px;height:56px;border-radius:14px;box-shadow:var(--shadow)}
-.icons img:nth-child(2){transform:translateY(-8px)}
-.icons img:nth-child(3){transform:translateY(-8px)}
+.icons img{width:72px;height:72px;border-radius:18px;box-shadow:var(--shadow)}
+.platform{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:15px;font-weight:600;box-shadow:var(--shadow)}
+.platform svg{flex:none}
+.platform small{color:var(--muted);font-weight:500}
 h1{font-size:clamp(26px,7vw,34px);line-height:1.35;margin:0 0 10px;font-weight:700}
 .lead{color:var(--muted);margin:0 auto;max-width:30em}
 .trust{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;margin:24px 0 8px;box-shadow:var(--shadow)}
@@ -84,7 +85,7 @@ details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
 details p{margin:0;padding:0 16px 14px;color:var(--muted);font-size:15.5px}
 footer{color:var(--muted);font-size:14px;text-align:center;padding:36px 0 40px}
 footer a{color:var(--gold);text-decoration:none;font-weight:600}
-.android-only{display:none;background:var(--surface);border:1px dashed var(--gold);border-radius:14px;padding:12px 14px;margin-top:18px;font-size:15px;color:var(--muted)}
+.android-only{display:none;background:var(--surface);border:1px solid var(--gold);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:15.5px;color:var(--text)}
 .not-android .android-only{display:block}
 @media (max-width:380px){.app .row{grid-template-columns:1fr}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
@@ -98,14 +99,13 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
 
   <section class="hero">
     <div class="icons" aria-hidden="true">
-      <img src="icons/sa.jja.hijri.png" alt="">
-      <img src="icons/sa.tawtheeq.app.png" alt="">
       <img src="icons/sa.taibah.mushaf.png" alt="">
       <img src="icons/sa.awqat.app.png" alt="">
     </div>
     <h1>جرّب تطبيقاتنا قبل إطلاقها</h1>
     <p class="lead">خطوتين من جوالك وتصير من أوائل من يستخدمها. رأيك يساعدنا نطلقها للجميع بأفضل صورة.</p>
-    <div class="android-only">التطبيقات متاحة حاليًا لجوالات أندرويد. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.</div>
+    <div class="platform"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><path d="M1 1.2 12.3 12 1 22.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4z" fill="#00a0ff"/><path d="m16 8.3-3.7 3.7L1 1.2c.3-.2.8-.3 1.3-.1z" fill="#00f076"/><path d="M16 15.7 2.3 23c-.5.2-1 .1-1.3-.1L12.3 12z" fill="#ff3a44"/><path d="m16 8.3 4.3 2.4c1.2.7 1.2 1.9 0 2.6L16 15.7 12.3 12z" fill="#ffd400"/></svg><span>لجوالات أندرويد <small>· من Google Play</small></span></div>
+    <div class="android-only" id="notAndroid"><b>تستخدم آيفون؟</b> التجربة الآن لجوالات أندرويد فقط، ولا تعمل على الآيفون.</div>
   </section>
 
   <div class="trust">
@@ -130,22 +130,6 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
     <div class="step-head"><div class="num">٢</div><h3>اختر التطبيق واشترك فيه</h3></div>
     <p>«اشترك» يفتح صفحة التجربة، اضغط فيها <b class="en" dir="ltr">Become a tester</b>. ثم «ثبّت» يفتح التطبيق في المتجر.</p>
     <div class="apps">
-      <div class="app" data-pkg="sa.jja.hijri">
-        <img src="icons/sa.jja.hijri.png" alt="">
-        <div><h4>أيام</h4><p>التحويل بين التاريخ الهجري والميلادي، مع التذكيرات.</p></div>
-        <div class="row">
-          <a class="btn optin" href="https://play.google.com/apps/testing/sa.jja.hijri" target="_blank" rel="noopener">اشترك</a>
-          <a class="ghost" href="https://play.google.com/store/apps/details?id=sa.jja.hijri" target="_blank" rel="noopener">ثبّت</a>
-        </div>
-      </div>
-      <div class="app" data-pkg="sa.tawtheeq.app">
-        <img src="icons/sa.tawtheeq.app.png" alt="">
-        <div><h4>توثيق Pro</h4><p>اكتب الموضوع أو قله بصوتك والتقرير يتعبّى بنفسه، مع الشهادات.</p></div>
-        <div class="row">
-          <a class="btn optin" href="https://play.google.com/apps/testing/sa.tawtheeq.app" target="_blank" rel="noopener">اشترك</a>
-          <a class="ghost" href="https://play.google.com/store/apps/details?id=sa.tawtheeq.app" target="_blank" rel="noopener">ثبّت</a>
-        </div>
-      </div>
       <div class="app" data-pkg="sa.taibah.mushaf">
         <img src="icons/sa.taibah.mushaf.png" alt="">
         <div><h4>مصحف طيبة</h4><p>المصحف الشريف بخط واضح وتصفح مريح.</p></div>
@@ -173,6 +157,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
 
   <h2>أسئلة سريعة</h2>
   <details><summary>هل أرسل بريدي لأحد؟</summary><p>لا. الانضمام يتم داخل صفحات Google الرسمية بحسابك الموجود في الجوال، ولا تكتب بريدك في أي مكان.</p></details>
+  <details><summary>هل تعمل على الآيفون؟</summary><p>لا، التجربة الآن لجوالات أندرويد فقط عن طريق Google Play.</p></details>
   <details><summary>هل هي مجانية؟</summary><p>نعم، تحميل نسخ التجربة مجاني.</p></details>
   <details><summary>هل ستصلني رسائل من المجموعة؟</summary><p>لا. المجموعة مغلقة الرسائل، وقائمة أعضائها لا يراها أحد غيرنا.</p></details>
   <details><summary>ما الفرق بين نسخة التجربة والنسخة العادية؟</summary><p>تصلك التحديثات الجديدة قبل غيرك. وقد يشارك Google معنا إحصاءات عامة عن استخدام نسخة التجربة لنحسّنها، كما توضح صفحة الاشتراك.</p></details>
@@ -199,7 +184,9 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   document.querySelectorAll('.app .optin').forEach(function(b){
     b.addEventListener('click', function(){ st[b.closest('.app').dataset.pkg]=1; save(); setTimeout(paint,400); });
   });
-  if(!/Android/i.test(navigator.userAgent)) document.documentElement.classList.add('not-android');
+  var ua=navigator.userAgent, ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+  if(!/Android/i.test(ua)){ document.documentElement.classList.add('not-android');
+    if(!ios) document.getElementById('notAndroid').innerHTML='التجربة لجوالات أندرويد فقط. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.'; }
   document.getElementById('y').textContent = new Date().getFullYear();
   paint();
 })();
