@@ -5,9 +5,9 @@
 <meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>المصحف الشريف ومواقيت الصلاة — JJA Software</title>
-<meta name="description" content="جرّب تطبيقات JJA Software الجديدة مجانًا بالكامل قبل إطلاقها على Google Play، بخطوتين من جوالك.">
+<meta name="description" content="جرّب تطبيقات JJA Software الجديدة مجانًا بالكامل قبل إطلاقها على Google Play، خطوة بخطوة من جوالك.">
 <meta property="og:title" content="المصحف الشريف ومواقيت الصلاة — مجانية بالكامل">
-<meta property="og:description" content="تطبيقان جديدان مجانيان بالكامل، جرّبهما قبل إطلاقهما بخطوتين من جوالك الأندرويد.">
+<meta property="og:description" content="تطبيقان جديدان مجانيان بالكامل، جرّبهما قبل إطلاقهما خطوة بخطوة من جوالك الأندرويد.">
 <meta property="og:image" content="https://jjasoftwaree.github.io/join/share.png">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
@@ -23,78 +23,106 @@
 :root{
   --bg:#f7f3ea; --surface:#ffffff; --surface2:#f1ebdd; --line:#e3d9c4;
   --text:#1d1a14; --muted:#5f5747; --gold:#9a6d1c; --gold-strong:#7d5612;
-  --on-gold:#ffffff; --ok:#1f7a45; --ok-bg:#e3f4ea; --shadow:0 1px 2px rgba(60,40,0,.06),0 8px 24px rgba(60,40,0,.06);
+  --on-gold:#ffffff; --ok:#1f7a45; --ok-bg:#e3f4ea; --warn:#9a3a12; --warn-bg:#fbeadf;
+  --shadow:0 1px 2px rgba(60,40,0,.06),0 8px 24px rgba(60,40,0,.06);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0e0d0b; --surface:#181612; --surface2:#211e18; --line:#2f2a21;
     --text:#f3ede0; --muted:#b5ab97; --gold:#d8b56a; --gold-strong:#e8c87e;
-    --on-gold:#1a1408; --ok:#7fd3a0; --ok-bg:#16291e; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+    --on-gold:#1a1408; --ok:#7fd3a0; --ok-bg:#16291e; --warn:#f0a77f; --warn-bg:#2c1a12;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
   }
 }
 :root[data-theme="dark"]{
   --bg:#0e0d0b; --surface:#181612; --surface2:#211e18; --line:#2f2a21;
   --text:#f3ede0; --muted:#b5ab97; --gold:#d8b56a; --gold-strong:#e8c87e;
-  --on-gold:#1a1408; --ok:#7fd3a0; --ok-bg:#16291e; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  --on-gold:#1a1408; --ok:#7fd3a0; --ok-bg:#16291e; --warn:#f0a77f; --warn-bg:#2c1a12;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.7;font-size:17px}
 a{color:inherit}
+[hidden]{display:none!important}
 .wrap{max-width:640px;margin:0 auto;padding:0 16px}
 header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 4px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
 .mark{width:36px;height:36px;border-radius:10px;background:#141210;color:#d8b56a;display:grid;place-items:center;font:700 12px/1 Arial,sans-serif;border:1px solid #3a3226}
 .brand span{direction:ltr}
-.hero{padding:28px 0 8px;text-align:center}
-.icons{display:flex;justify-content:center;gap:10px;margin-bottom:22px}
-.icons{gap:18px}
+.hero{padding:24px 0 8px;text-align:center}
+.icons{display:flex;justify-content:center;gap:18px;margin-bottom:20px}
 .icons figure{margin:0;display:grid;justify-items:center;gap:8px}
-.icons figcaption{font-size:14.5px;font-weight:600;color:var(--text)}
+.icons figcaption{font-size:14.5px;font-weight:600}
 .icons img{width:76px;height:76px;border-radius:18px;box-shadow:var(--shadow)}
 .kicker{font-size:17px;font-weight:600;color:var(--muted);margin:0 0 4px}
-.platform{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:15px;font-weight:600;box-shadow:var(--shadow)}
+.platform{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:15px;font-weight:600;box-shadow:var(--shadow)}
 .platform svg{flex:none}
 .platform small{color:var(--muted);font-weight:500}
 .free{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;padding:6px 16px;border-radius:999px;background:var(--gold);color:var(--on-gold);font-weight:700;font-size:16px}
-.tag{display:inline-block;margin-inline-start:8px;padding:1px 10px;border-radius:999px;background:var(--gold);color:var(--on-gold);font-size:12.5px;font-weight:700;vertical-align:middle}
 h1{font-size:clamp(26px,7vw,34px);line-height:1.35;margin:0 0 10px;font-weight:700}
 .lead{color:var(--muted);margin:0 auto;max-width:30em}
-.trust{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;margin:24px 0 8px;box-shadow:var(--shadow)}
-.trust svg{flex:none;margin-top:3px;color:var(--gold)}
-.trust b{display:block;margin-bottom:2px}
-.trust p{margin:0;color:var(--muted);font-size:15.5px}
 h2{font-size:21px;margin:36px 0 6px;font-weight:700}
-.sub{color:var(--muted);margin:0 0 14px;font-size:15.5px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
-.step-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
-.num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--on-gold);display:grid;place-items:center;font-weight:700}
-.step.done .num{background:var(--ok);color:var(--surface)}
-.step-head h3{margin:0;font-size:18px}
-.step p{margin:0 0 14px;color:var(--muted);font-size:15.5px}
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 18px;border-radius:14px;background:var(--gold);color:var(--on-gold);font-weight:700;text-decoration:none;font-size:17px;border:0;width:100%;transition:filter .15s}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:12px 18px;border-radius:14px;background:var(--gold);color:var(--on-gold);font:inherit;font-weight:700;text-decoration:none;font-size:17px;border:0;width:100%;cursor:pointer;transition:filter .15s}
 .btn:hover{filter:brightness(1.06)}
-.btn:focus-visible,.ghost:focus-visible,summary:focus-visible{outline:3px solid var(--gold-strong);outline-offset:3px}
-.ghost{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);color:var(--text);font-weight:600;text-decoration:none;font-size:15.5px}
-.state{display:none;align-items:center;gap:6px;color:var(--ok);background:var(--ok-bg);border-radius:10px;padding:6px 10px;font-size:14.5px;font-weight:600;margin-top:10px;width:fit-content}
-.step.done .state{display:flex}
-.apps{display:grid;gap:12px}
-.app{display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:start;background:var(--surface2);border-radius:16px;padding:14px}
-.app img{width:60px;height:60px;border-radius:14px}
-.app h4{margin:0;font-size:17px}
-.app p{margin:2px 0 10px;font-size:14.5px;color:var(--muted)}
-.app .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;grid-column:1/-1}
-.app .row .btn{min-height:48px;font-size:15.5px}
-.app.joined .row .btn{background:var(--ok);color:var(--surface)}
-.en{white-space:nowrap;unicode-bidi:isolate}
+.btn[disabled]{opacity:.45;cursor:default;filter:none}
+.btn.ok{background:var(--ok);color:var(--surface)}
+.ghost{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);color:var(--text);font:inherit;font-weight:600;text-decoration:none;font-size:15.5px;width:100%;cursor:pointer}
+.link{background:none;border:0;color:var(--gold);font:inherit;font-weight:600;font-size:15.5px;cursor:pointer;min-height:48px;padding:8px 4px;text-decoration:none;display:inline-flex;align-items:center}
+.btn:focus-visible,.ghost:focus-visible,.link:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--gold-strong);outline-offset:3px}
+.android-only{display:none;background:var(--surface);border:1px solid var(--gold);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:15.5px}
+.not-android .android-only{display:block}
+.en{white-space:nowrap;unicode-bidi:isolate;direction:ltr}
+
+/* The guide: one step on screen at a time. */
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow);margin-top:22px;scroll-margin-top:12px}
+.progress{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;font-size:14.5px;color:var(--muted);font-weight:600}
+.bar{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:16px}
+.bar i{height:6px;border-radius:99px;background:var(--surface2);border:1px solid var(--line)}
+.bar i.on{background:var(--gold);border-color:var(--gold)}
+.bar i.done{background:var(--ok);border-color:var(--ok)}
+.panel h3{margin:0 0 6px;font-size:21px;line-height:1.45}
+.panel>p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.panel>p b{color:var(--text)}
+.who{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface2);border-radius:12px;padding:6px 6px 6px 12px;margin:0 0 14px;font-size:14.5px;color:var(--muted)}
+.who b{color:var(--text);direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}
+.field{position:relative;margin:4px 0 6px}
+.field input{width:100%;min-height:56px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font:inherit;font-size:18px;padding:10px 14px 10px 52px;direction:ltr;text-align:left}
+.field input:focus{border-color:var(--gold)}
+.field .clear{position:absolute;left:4px;top:4px;width:48px;height:48px;border:0;background:none;color:var(--muted);font-size:22px;cursor:pointer;border-radius:12px}
+.err{color:var(--warn);font-size:14.5px;min-height:1.6em;margin:0 0 6px}
+.howto{background:var(--surface2);border-radius:14px;padding:12px 14px;margin:6px 0 14px;font-size:15px;color:var(--muted)}
+.howto ol{margin:6px 0 0;padding-inline-start:22px;list-style:arabic-indic}
+.howto b{color:var(--text)}
+.look{display:flex;gap:10px;align-items:flex-start;background:var(--ok-bg);color:var(--text);border-radius:14px;padding:12px 14px;margin:14px 0;font-size:15.5px}
+.look svg{flex:none;color:var(--ok);margin-top:3px}
+.ask{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}
+.ask p{margin:0 0 10px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.app{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;background:var(--surface2);border-radius:16px;padding:12px;margin-bottom:10px}
+.app img{width:52px;height:52px;border-radius:12px}
+.app h4{margin:0;font-size:16.5px}
+.app small{display:block;color:var(--muted);font-size:13.5px}
+.app .acts{grid-column:1/-1;display:grid;gap:8px}
+.app .confirm{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.app.done{outline:2px solid var(--ok);outline-offset:-2px}
+.chip{display:none;align-items:center;gap:6px;color:var(--ok);font-weight:700;font-size:15px}
+.app.done .chip{display:flex}
+.app.done .acts{display:none}
+.help{margin-top:12px;background:var(--warn-bg);border-radius:14px;padding:4px 14px 12px}
+.help h4{margin:10px 0 4px;font-size:16px;color:var(--warn)}
+.help ul{margin:0;padding-inline-start:20px;color:var(--text);font-size:15px}
+.help li{margin:6px 0}
+.back{display:flex;justify-content:flex-start;margin-top:8px}
+.done-hero{text-align:center}
+.done-hero .big{width:64px;height:64px;border-radius:50%;background:var(--ok);color:var(--surface);display:grid;place-items:center;margin:4px auto 10px}
+
 .share{margin:22px 0 4px;background:linear-gradient(160deg,var(--surface),var(--surface2));border:1px solid var(--gold);border-radius:20px;padding:18px;text-align:center;box-shadow:var(--shadow)}
 .share .hadith{font-size:19px;font-weight:700;line-height:1.8;margin:0;color:var(--gold-strong)}
 .share .src{display:block;font-size:13px;color:var(--muted);margin:2px 0 10px}
 .share p{margin:0 0 14px;color:var(--muted);font-size:15.5px}
-.share .row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .share .copied{display:none;color:var(--ok);font-size:14.5px;font-weight:600;margin-top:10px}
 .share.done .copied{display:block}
-.tip{font-size:14.5px;color:var(--muted);background:var(--surface2);border-radius:12px;padding:10px 12px;margin-top:12px}
 details{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
 summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px}
 summary::-webkit-details-marker{display:none}
@@ -103,10 +131,10 @@ details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
 details p{margin:0;padding:0 16px 14px;color:var(--muted);font-size:15.5px}
 footer{color:var(--muted);font-size:14px;text-align:center;padding:36px 0 40px}
 footer a{color:var(--gold);text-decoration:none;font-weight:600}
-.android-only{display:none;background:var(--surface);border:1px solid var(--gold);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:15.5px;color:var(--text)}
-.not-android .android-only{display:block}
-@media (max-width:380px){.app .row{grid-template-columns:1fr}}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.panel{animation:in .2s cubic-bezier(.2,0,0,1)}
+@keyframes in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+@media (max-width:360px){.two,.app .confirm{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -123,66 +151,111 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
     <div class="free">مجانية بالكامل</div>
     <h1>المصحف الشريف<br>ومواقيت الصلاة</h1>
     <p class="kicker">تطبيقان جديدان، جرّبهما قبل إطلاقهما للجميع</p>
-    <p class="lead">كل الميزات مفتوحة، بلا اشتراك ولا مقابل. خطوتين من جوالك وتصير من أوائل من يستخدمها.</p>
+    <p class="lead">كل الميزات مفتوحة، بلا اشتراك ولا مقابل. أربع خطوات قصيرة، والصفحة تمشي معك خطوة خطوة.</p>
     <div class="platform"><svg width="22" height="24" viewBox="0 0 22 24" aria-hidden="true"><path d="M1 1.2 12.3 12 1 22.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4z" fill="#00a0ff"/><path d="m16 8.3-3.7 3.7L1 1.2c.3-.2.8-.3 1.3-.1z" fill="#00f076"/><path d="M16 15.7 2.3 23c-.5.2-1 .1-1.3-.1L12.3 12z" fill="#ff3a44"/><path d="m16 8.3 4.3 2.4c1.2.7 1.2 1.9 0 2.6L16 15.7 12.3 12z" fill="#ffd400"/></svg><span>لجوالات أندرويد <small>· من Google Play</small></span></div>
     <div class="android-only" id="notAndroid"><b>تستخدم آيفون؟</b> التجربة الآن لجوالات أندرويد فقط، ولا تعمل على الآيفون.</div>
   </section>
 
-  <div class="share" id="shareTop">
-    <p class="hadith">«مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ»</p>
-    <span class="src">رواه مسلم</span>
-    <p>مصحف تقرأ منه، ومواقيت تذكّر بالصلاة، ومجانية بالكامل. شارك الرابط مع أهلك وأصحابك، ولك مثل أجر كل من ينتفع بها.</p>
-    <div class="row2">
-      <a class="btn" data-share href="https://wa.me/?text=">شارك الرابط</a>
-      <button class="ghost" type="button" data-copy>انسخ الرابط</button>
+  <section class="guide" id="guide" aria-live="polite">
+    <div class="progress"><span id="stepLabel">الخطوة ١ من ٤</span><span id="stepName"></span></div>
+    <div class="bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <!-- 1. The account: every Google page after this opens on it. -->
+    <div class="panel" data-step="1">
+      <h3>اكتب إيميلك في متجر Play</h3>
+      <p>نفس الحساب الذي ينزّل به جوالك التطبيقات. بعدها تفتح كل الصفحات على هذا الحساب نفسه، فلا يحصل خلط بين حساباتك.</p>
+      <div class="howto">
+        <b>من أين أعرفه؟</b>
+        <ol>
+          <li>افتح تطبيق <b>متجر Play</b>.</li>
+          <li>اضغط <b>صورتك</b> أعلى الشاشة.</li>
+          <li>الإيميل يظهر تحت اسمك. اكتبه هنا.</li>
+        </ol>
+      </div>
+      <div class="field">
+        <input id="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" enterkeyhint="next" placeholder="name@gmail.com" aria-label="إيميل حسابك في متجر Play" aria-describedby="emailErr">
+        <button class="clear" type="button" id="clearEmail" aria-label="مسح الإيميل" hidden>×</button>
+      </div>
+      <div class="err" id="emailErr"></div>
+      <button class="btn" type="button" id="saveEmail">التالي</button>
+      <p style="margin:10px 0 0;font-size:13.5px;color:var(--muted)">الإيميل يبقى في جوالك فقط، ولا يصلنا.</p>
     </div>
-    <div class="copied">نُسخ الرابط ✓</div>
-  </div>
 
-  <h2>الخطوات</h2>
-  <p class="sub">استخدم نفس حساب Google الموجود في متجر Play بجوالك.</p>
-
-  <div class="step" id="s1">
-    <div class="step-head"><div class="num">١</div><h3>انضم لفريق المختبرين</h3></div>
-    <p>مرة واحدة فقط، وتفتح لك تجربة كل تطبيقاتنا. في الصفحة اضغط الزر الذي تحت اسم المجموعة: <b>«الانضمام إلى المجموعة»</b> أو <b class="en" dir="ltr">Join group</b>.</p>
-    <a class="btn" id="joinGroup" href="https://groups.google.com/g/jja-software-testers" target="_blank" rel="noopener">انضم لفريق المختبرين</a>
-    <div class="tip">في جوالك أكثر من حساب؟ إذا غيّرت الحساب في صفحة المجموعة ووصلت لصفحة «مجموعاتي»، ارجع هنا واضغط الزر مرة ثانية ليظهر لك زر الانضمام.</div>
-    <div class="state"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>تم، انتقل للخطوة الثانية</div>
-  </div>
-
-  <div class="step" id="s2">
-    <div class="step-head"><div class="num">٢</div><h3>اختر التطبيق واشترك فيه</h3></div>
-    <p>«اشترك» يفتح صفحة التجربة، اضغط فيها <b class="en" dir="ltr">Become a tester</b>. ثم «ثبّت» يفتح التطبيق في المتجر.</p>
-    <div class="apps">
-      <div class="app" data-pkg="sa.taibah.mushaf">
-        <img src="icons/sa.taibah.mushaf.png" alt="">
-        <div><h4>المصحف الشريف<span class="tag">مجاني</span></h4><p>تطبيق «مصحف طيبة»: المصحف بخط واضح وتصفح مريح.</p></div>
-        <div class="row">
-          <a class="btn optin" href="https://play.google.com/apps/testing/sa.taibah.mushaf" target="_blank" rel="noopener">اشترك</a>
-          <a class="ghost" href="https://play.google.com/store/apps/details?id=sa.taibah.mushaf" target="_blank" rel="noopener">ثبّت</a>
+    <!-- 2. The testers group. -->
+    <div class="panel" data-step="2" hidden>
+      <h3>انضم لفريق المختبرين</h3>
+      <div class="who"><span>بحساب <b data-email></b></span><button class="link" type="button" data-edit>تغيير</button></div>
+      <p>مرة واحدة فقط. في الصفحة التي تفتح، اضغط الزر الصغير <b>«الانضمام إلى المجموعة»</b> (<b class="en">Join group</b>) بجانب اسم المجموعة، ثم ارجع لهذه الصفحة بزر الرجوع.</p>
+      <a class="btn" id="groupLink" href="#">افتح صفحة المجموعة</a>
+      <div class="ask" id="groupAsk" hidden>
+        <p>هل اختفى زر الانضمام من جانب اسم المجموعة؟</p>
+        <div class="two">
+          <button class="btn ok" type="button" id="groupYes">نعم، انضممت</button>
+          <button class="ghost" type="button" data-help="groupHelp">ما زبط</button>
         </div>
       </div>
-      <div class="app" data-pkg="sa.awqat.app">
-        <img src="icons/sa.awqat.app.png" alt="">
-        <div><h4>مواقيت الصلاة<span class="tag">مجاني</span></h4><p>تطبيق «أوقات»: مواقيت الصلاة والأذان حسب موقعك.</p></div>
-        <div class="row">
-          <a class="btn optin" href="https://play.google.com/apps/testing/sa.awqat.app" target="_blank" rel="noopener">اشترك</a>
-          <a class="ghost" href="https://play.google.com/store/apps/details?id=sa.awqat.app" target="_blank" rel="noopener">ثبّت</a>
-        </div>
+      <div class="help" id="groupHelp" hidden>
+        <h4>جرّب حسب ما ظهر لك</h4>
+        <ul>
+          <li><b>صفحة «مجموعاتي»</b> أو «أنت لست عضوًا في أي مجموعة»: ارجع هنا واضغط «افتح صفحة المجموعة» مرة ثانية.</li>
+          <li><b>طلب منك تسجيل الدخول</b>: ادخل بنفس الإيميل المكتوب فوق، ثم اضغط زر الانضمام.</li>
+          <li><b>«التواصل مع المالكين والمديرين»</b> بدل زر الانضمام: أنت غير داخل بحسابك. سجّل الدخول ثم اضغط الزر.</li>
+          <li><b>ما لقيت الزر</b>: هو صغير بجانب اسم المجموعة، فوق الصورة. إن لم يكن موجودًا فأنت عضو من قبل، اضغط «نعم».</li>
+        </ul>
       </div>
     </div>
-    <div class="tip">إذا قالت لك صفحة التجربة إنك غير مدعو، فالانضمام في الخطوة الأولى يحتاج دقائق ليصل. انتظر قليلًا ثم افتحها من جديد.</div>
-  </div>
 
-  <div class="step" id="s3">
-    <div class="step-head"><div class="num">٣</div><h3>استخدم التطبيق</h3></div>
-    <p style="margin:0">افتحه واستخدمه كعادتك، وأبقه مثبّتًا ولا تلغِ اشتراكك <b>14&nbsp;يومًا على الأقل</b>؛ هذا شرط Google لنطلقه للجميع. وإن لاحظت شيئًا، راسلنا من داخل التطبيق.</p>
-  </div>
+    <!-- 3. Opt in, app by app. -->
+    <div class="panel" data-step="3" hidden>
+      <h3>اشترك في تجربة التطبيقين</h3>
+      <div class="who"><span>بحساب <b data-email></b></span><button class="link" type="button" data-edit>تغيير</button></div>
+      <p>لكل تطبيق: افتح صفحة التجربة، واضغط في أسفلها الزر <b class="en">Become a tester</b>، ثم ارجع هنا.</p>
+      <div class="look"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>تعرف أنه تم حين تقول الصفحة: <b class="en">You are a tester.</b></span></div>
+      <div id="optinApps"></div>
+      <div class="help" id="optinHelp" hidden>
+        <h4>جرّب حسب ما ظهر لك</h4>
+        <ul>
+          <li><b>تقول إن التطبيق غير متاح لك</b> أو إنك غير مدعو: الانضمام للمجموعة يحتاج دقائق ليصل. انتظر ١٠ دقائق ثم افتح الصفحة مرة ثانية. وإن بقيت، فتأكد أنك انضممت للمجموعة بنفس الإيميل المكتوب فوق.</li>
+          <li><b>طلبت منك تسجيل الدخول</b>: ادخل بنفس الإيميل المكتوب فوق.</li>
+          <li><b>فيها زر <span class="en">Leave the program</span></b>: أنت مشترك من قبل، اضغط «تم».</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Install from the store, on the same account. -->
+    <div class="panel" data-step="4" hidden>
+      <h3>ثبّت التطبيقين</h3>
+      <div class="who"><span>بحساب <b data-email></b></span><button class="link" type="button" data-edit>تغيير</button></div>
+      <div class="howto"><b>قبل التثبيت، مهم:</b> في متجر Play اضغط صورتك أعلى الشاشة، وتأكد أن الحساب المختار هو <b data-email class="en"></b>. إن كان غيره، اختره من القائمة.</div>
+      <div id="installApps"></div>
+      <div class="help" id="installHelp" hidden>
+        <h4>جرّب حسب ما ظهر لك</h4>
+        <ul>
+          <li><b>«حدث خطأ» أو «لا يتوفر اتصال بالإنترنت» أو «لم يتم العثور على العنصر»</b> والإنترنت شغال: متجر Play على حساب آخر. اضغط صورتك في المتجر واختر <b data-email class="en"></b>، ثم ارجع هنا واضغط «افتحه في المتجر» مرة ثانية.</li>
+          <li><b>ما زالت الرسالة بعد تغيير الحساب</b>: اشتراكك يحتاج وقتًا ليصل للمتجر. انتظر ربع ساعة وأعد المحاولة.</li>
+          <li><b>المتجر يقول «فتح» أو «تحديث»</b>: التطبيق مثبّت عندك، حدّثه إن ظهر «تحديث» ثم اضغط «تم».</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Done. -->
+    <div class="panel" data-step="5" hidden>
+      <div class="done-hero">
+        <div class="big"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div>
+        <h3>تم، جزاك الله خيرًا</h3>
+      </div>
+      <p>صرت من مختبري التطبيقين. افتحهما واستخدمهما كعادتك، و<b>أبقهما مثبّتين ١٤ يومًا على الأقل</b> ولا تلغِ اشتراكك، هذا شرط Google لنطلقهما للجميع. وإن لاحظت شيئًا، راسلنا من داخل التطبيق.</p>
+      <button class="ghost" type="button" id="restart">ابدأ من جديد بحساب آخر</button>
+    </div>
+
+    <div class="back" id="backRow" hidden><button class="link" type="button" id="back">→ الخطوة السابقة</button></div>
+  </section>
 
   <div class="share">
-    <p class="hadith" style="font-size:17px">لا تجعل الخير يقف عندك</p>
-    <p>أرسل الرابط لمن تحب، والأجر لك بإذن الله.</p>
-    <div class="row2">
+    <p class="hadith">«مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ»</p>
+    <span class="src">رواه مسلم</span>
+    <p>شارك الرابط مع أهلك وأصحابك، ولك مثل أجر كل من ينتفع بها.</p>
+    <div class="two">
       <a class="btn" data-share href="https://wa.me/?text=">شارك الرابط</a>
       <button class="ghost" type="button" data-copy>انسخ الرابط</button>
     </div>
@@ -192,9 +265,10 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   <h2>أسئلة سريعة</h2>
   <details><summary>هل تعمل على الآيفون؟</summary><p>لا، التجربة الآن لجوالات أندرويد فقط عن طريق Google Play.</p></details>
   <details><summary>هل هي مجانية؟</summary><p>نعم، مجانية بالكامل. التحميل مجاني، وكل الميزات مفتوحة بلا اشتراك.</p></details>
+  <details><summary>لماذا أكتب إيميلي؟</summary><p>لتفتح صفحات Google على حسابك الصحيح إن كان في جوالك أكثر من حساب. يبقى في جوالك فقط ولا يُرسل لنا.</p></details>
   <details><summary>هل ستصلني رسائل من المجموعة؟</summary><p>لا. المجموعة مغلقة الرسائل، وقائمة أعضائها لا يراها أحد غيرنا.</p></details>
-  <details><summary>ما الفرق بين نسخة التجربة والنسخة العادية؟</summary><p>تصلك التحديثات الجديدة قبل غيرك. وقد يشارك Google معنا إحصاءات عامة عن استخدام نسخة التجربة لنحسّنها، كما توضح صفحة الاشتراك.</p></details>
-  <details><summary>كيف أخرج من التجربة؟</summary><p>افتح صفحة «اشترك» للتطبيق نفسه واضغط <b class="en" dir="ltr">Leave the program</b>. ويمكنك مغادرة المجموعة من صفحتها متى شئت.</p></details>
+  <details><summary>خرجت من الصفحة في منتصف الخطوات</summary><p>افتح الرابط مرة ثانية، وتكمل من حيث وقفت.</p></details>
+  <details><summary>كيف أخرج من التجربة؟</summary><p>افتح صفحة التجربة للتطبيق نفسه واضغط <b class="en">Leave the program</b>. ويمكنك مغادرة المجموعة من صفحتها متى شئت.</p></details>
 
   <footer>
     <div><bdi dir="ltr">© <span id="y">2026</span> JJA Software</bdi> · صُنع في السعودية</div>
@@ -203,25 +277,126 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
 </div>
 <script>
 (function(){
-  var KEY='jja-join-v1', st={};
+  var APPS=[
+    {pkg:'sa.taibah.mushaf', name:'المصحف الشريف', sub:'تطبيق «مصحف طيبة»'},
+    {pkg:'sa.awqat.app', name:'مواقيت الصلاة', sub:'تطبيق «أوقات»'}
+  ];
+  var NAMES=['','حسابك','المجموعة','الاشتراك','التثبيت'];
+  var DIGITS='٠١٢٣٤٥٦٧٨٩';
+  function ar(n){ return String(n).replace(/\d/g,function(d){return DIGITS[d];}); }
+  var KEY='jja-join-v2', st={};
   try{ st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){}
+  st.optin=st.optin||{}; st.inst=st.inst||{}; st.opened=st.opened||{};
   function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
-  function paint(){
-    document.getElementById('s1').classList.toggle('done', !!st.group);
-    document.querySelectorAll('.app').forEach(function(a){
-      var on=!!st[a.dataset.pkg]; a.classList.toggle('joined', on);
-      var b=a.querySelector('.optin'); b.textContent = on ? 'مشترك ✓' : 'اشترك';
+  function $(id){ return document.getElementById(id); }
+  function withAccount(url){ return st.email ? url+(url.indexOf('?')<0?'?':'&')+'authuser='+encodeURIComponent(st.email) : url; }
+
+  function appRows(box, kind){
+    box.innerHTML='';
+    APPS.forEach(function(a){
+      var row=document.createElement('div'); row.className='app'; row.dataset.pkg=a.pkg;
+      var href= kind==='optin' ? withAccount('https://play.google.com/apps/testing/'+a.pkg)
+                               : 'https://play.google.com/store/apps/details?id='+a.pkg;
+      row.innerHTML='<img src="icons/'+a.pkg+'.png" alt="">'+
+        '<div><h4>'+a.name+'</h4><small>'+a.sub+'</small><span class="chip">✓ '+(kind==='optin'?'صرت مختبِرًا':'تم التثبيت')+'</span></div>'+
+        '<div class="acts"><a class="btn" href="'+href+'">'+(kind==='optin'?'افتح صفحة التجربة':'افتحه في المتجر')+'</a>'+
+        '<div class="confirm" hidden><button class="btn ok" type="button" data-yes>'+(kind==='optin'?'تم، ظهرت':'تم التثبيت')+'</button>'+
+        '<button class="ghost" type="button" data-no>ما زبط</button></div></div>';
+      var link=row.querySelector('a'), confirm=row.querySelector('.confirm');
+      var openedKey=kind+':'+a.pkg;
+      if(st.opened[openedKey]) confirm.hidden=false;
+      link.addEventListener('click', function(){ st.opened[openedKey]=1; save(); });
+      row.querySelector('[data-yes]').addEventListener('click', function(){
+        (kind==='optin'?st.optin:st.inst)[a.pkg]=1; save(); render();
+      });
+      row.querySelector('[data-no]').addEventListener('click', function(){
+        var h=$(kind==='optin'?'optinHelp':'installHelp'); h.hidden=false; h.scrollIntoView({block:'nearest',behavior:'smooth'});
+      });
+      row.classList.toggle('done', !!(kind==='optin'?st.optin:st.inst)[a.pkg]);
+      box.appendChild(row);
     });
   }
-  document.getElementById('joinGroup').addEventListener('click', function(){ st.group=1; save(); setTimeout(paint,400); });
-  document.querySelectorAll('.app .optin').forEach(function(b){
-    b.addEventListener('click', function(){ st[b.closest('.app').dataset.pkg]=1; save(); setTimeout(paint,400); });
+
+  function allDone(map){ return APPS.every(function(a){ return map[a.pkg]; }); }
+
+  function currentStep(){
+    if(!st.email) return 1;
+    if(!st.group) return 2;
+    if(!allDone(st.optin)) return 3;
+    if(!allDone(st.inst)) return 4;
+    return 5;
+  }
+
+  var shownStep=0;
+  function render(){
+    var step=st.view && st.view<currentStep() ? st.view : currentStep();
+    document.querySelectorAll('.panel').forEach(function(p){ p.hidden= +p.dataset.step!==step; });
+    var shown=Math.min(step,4);
+    $('stepLabel').textContent= step>4 ? 'اكتملت الخطوات' : 'الخطوة '+ar(shown)+' من ٤';
+    $('stepName').textContent= step>4 ? '' : NAMES[shown];
+    document.querySelectorAll('.bar i').forEach(function(b,i){
+      b.className= i+1<step ? 'done' : (i+1===step ? 'on' : '');
+    });
+    document.querySelectorAll('[data-email]').forEach(function(e){ e.textContent=st.email||''; });
+    $('groupLink').href=withAccount('https://groups.google.com/g/jja-software-testers');
+    $('groupAsk').hidden=!st.opened.group;
+    if(step===3) appRows($('optinApps'),'optin');
+    if(step===4) appRows($('installApps'),'install');
+    $('backRow').hidden= step<=1 || step>4;
+    if(shownStep && shownStep!==step){ $('guide').scrollIntoView({block:'start',behavior:'smooth'}); }
+    shownStep=step;
+  }
+
+  // Step 1: the email.
+  var email=$('email'), clear=$('clearEmail');
+  email.value=st.email||'';
+  function syncClear(){ clear.hidden=!email.value; }
+  email.addEventListener('input', function(){ $('emailErr').textContent=''; syncClear(); });
+  clear.addEventListener('click', function(){ email.value=''; syncClear(); email.focus(); });
+  function saveEmail(){
+    var v=email.value.trim().toLowerCase();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ $('emailErr').textContent='اكتب الإيميل كاملًا، مثل name@gmail.com'; email.focus(); return; }
+    if(st.email && st.email!==v){ st.group=0; st.optin={}; st.inst={}; st.opened={}; }
+    st.email=v; st.view=0; save(); email.blur(); render();
+  }
+  $('saveEmail').addEventListener('click', saveEmail);
+  email.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); saveEmail(); } });
+  syncClear();
+
+  document.querySelectorAll('[data-edit]').forEach(function(b){
+    b.addEventListener('click', function(){ st.view=1; save(); render(); email.focus(); });
   });
+
+  // Step 2: the group.
+  $('groupLink').addEventListener('click', function(){ st.opened.group=1; save(); });
+  $('groupYes').addEventListener('click', function(){ st.group=1; st.view=0; save(); render(); });
+  document.querySelectorAll('[data-help]').forEach(function(b){
+    b.addEventListener('click', function(){ var h=$(b.dataset.help); h.hidden=false; h.scrollIntoView({block:'nearest',behavior:'smooth'}); });
+  });
+
+  // Going back one step undoes that step's confirmation, so it can be done again.
+  $('back').addEventListener('click', function(){
+    var step=st.view && st.view<currentStep() ? st.view : currentStep();
+    if(step===2){ st.view=1; }
+    else if(step===3){ st.group=0; st.view=0; }
+    else if(step===4){ st.optin={}; st.view=0; }
+    document.querySelectorAll('.help').forEach(function(h){ h.hidden=true; });
+    save(); render();
+  });
+  $('restart').addEventListener('click', function(){
+    st={optin:{},inst:{},opened:{}}; save(); email.value=''; syncClear(); render(); email.focus();
+  });
+
+  // Coming back from a Google page (the back button) shows the question for that step.
+  window.addEventListener('pageshow', render);
+  document.addEventListener('visibilitychange', function(){ if(!document.hidden) render(); });
+
   var ua=navigator.userAgent, ios=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
   if(!/Android/i.test(ua)){ document.documentElement.classList.add('not-android');
-    if(!ios) document.getElementById('notAndroid').innerHTML='التجربة لجوالات أندرويد فقط. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.'; }
+    if(!ios) $('notAndroid').innerHTML='التجربة لجوالات أندرويد فقط. افتح هذه الصفحة من جوالك الأندرويد لتكمل الخطوات.'; }
+
   var URL='https://jjasoftwaree.github.io/join/';
-  var MSG='تطبيق للمصحف الشريف وتطبيق لمواقيت الصلاة، مجانية بالكامل. جرّبها قبل إطلاقها، و«من دلّ على خير فله مثل أجر فاعله»:\n'+URL;
+  var MSG='تطبيق للمصحف الشريف وتطبيق لمواقيت الصلاة، مجانية بالكامل. جرّبها قبل إطلاقها، والصفحة تشرح لك خطوة خطوة، و«من دلّ على خير فله مثل أجر فاعله»:\n'+URL;
   document.querySelectorAll('[data-share]').forEach(function(a){
     a.href='https://wa.me/?text='+encodeURIComponent(MSG);
     a.addEventListener('click', function(e){
@@ -249,8 +424,8 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
       } else { prompt('انسخ الرابط:',URL); }
     });
   });
-  document.getElementById('y').textContent = new Date().getFullYear();
-  paint();
+  $('y').textContent=new Date().getFullYear();
+  render();
 })();
 </script>
 </body>
