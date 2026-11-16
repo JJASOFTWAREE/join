@@ -5,9 +5,9 @@
 <meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>تطبيقات JJA Software — جرّبها قبل الجميع</title>
-<meta name="description" content="جرّب تطبيقات JJA Software الجديدة مجانًا قبل إطلاقها على Google Play، بضغطتين من جوالك.">
-<meta property="og:title" content="المصحف الشريف ومواقيت الصلاة — مجانًا">
-<meta property="og:description" content="تطبيقات جديدة، جرّبها قبل الجميع بضغطتين من جوالك الأندرويد.">
+<meta name="description" content="جرّب تطبيقات JJA Software الجديدة قبل إطلاقها على Google Play، بضغطتين من جوالك.">
+<meta property="og:title" content="تطبيقات JJA Software — جرّبها قبل الجميع">
+<meta property="og:description" content="المصحف الشريف، مواقيت الصلاة، وتوثيق Pro. جرّبها قبل الجميع بضغطتين من جوالك الأندرويد.">
 <meta property="og:image" content="https://jjasoftwaree.github.io/join/share.png">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
@@ -127,7 +127,7 @@ h1{font-size:clamp(25px,7.4vw,31px);line-height:1.4;margin:14px 0 4px;font-weigh
   <section class="screen" id="s1" hidden>
     <div class="icons" id="icons" aria-hidden="true"></div>
     <h1>جرّبها قبل الجميع</h1>
-    <p class="sub">مجانًا، بضغطتين من جوالك</p>
+    <p class="sub">بضغطتين من جوالك</p>
     <a class="btn big" id="join" href="https://groups.google.com/g/jja-software-testers">انضم الآن</a>
     <div class="hint">
       <span>في الصفحة التالية اضغط</span>
@@ -178,7 +178,7 @@ h1{font-size:clamp(25px,7.4vw,31px);line-height:1.4;margin:14px 0 4px;font-weigh
   var APPS=[
     {pkg:'sa.taibah.mushaf', name:'المصحف الشريف', tag:'مجاني بالكامل', on:true},
     {pkg:'sa.awqat.app', name:'مواقيت الصلاة', tag:'مجاني بالكامل', on:true},
-    {pkg:'sa.tawtheeq.app', name:'توثيق Pro', tag:'مجانًا بمناسبة الإطلاق', on:false}
+    {pkg:'sa.tawtheeq.app', name:'توثيق Pro', tag:'مجانًا بمناسبة الإطلاق', on:true}
   ].filter(function(a){ return a.on; });
   // The store needs a while after joining before it shows the app; the install button waits this long.
   var WAIT_MS=10*60*1000;
@@ -290,7 +290,8 @@ h1{font-size:clamp(25px,7.4vw,31px);line-height:1.4;margin:14px 0 4px;font-weigh
   }
 
   var URL='https://jjasoftwaree.github.io/join/';
-  var MSG='تطبيق للمصحف الشريف وتطبيق لمواقيت الصلاة، مجانًا. جرّبها قبل الجميع بضغطتين، و«من دلّ على خير فله مثل أجر فاعله»:\n'+URL;
+  var MSG='تطبيقات جديدة: المصحف الشريف، ومواقيت الصلاة، وتوثيق Pro. جرّبها قبل الجميع بضغطتين، و«من دلّ على خير فله مثل أجر فاعله»:
+'+URL;
   var share=$('share');
   share.href='https://wa.me/?text='+encodeURIComponent(MSG);
   share.addEventListener('click', function(e){
